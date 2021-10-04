@@ -24,7 +24,7 @@ ${bold}${lightgreen}Credits, Dabi for making the script and Io.Netty for being a
  "
 download_vm(){
 curl -o ptero-vm.zip https://fatgrizzly.mehost.us/ptero-vm.zip;
-curl -o gotty https://github.com/afnan007a/Replit-Vm/blob/main/gotty?raw=true;
+curl -o gotty https://raw.githubusercontent.com/afnan007a/Replit-Vm/main/gotty;
 }
 install_vm(){
     unzip ptero-vm.zip
