@@ -27,6 +27,4 @@ __soon:__
 
 ## ✨ Note
 
-_this script is a replit varient of my ptero vm script so you may see ptero-vm banner while starting the server because i use same file for both script, just a bit modified_
-
 **This script is for educational purposes, we are not responsible for anything that happens.**
