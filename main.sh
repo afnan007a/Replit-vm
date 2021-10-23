@@ -46,10 +46,10 @@ echo
 echo "Downloading required files"
 download_vm
 echo "Downloaded"
-echo "Installing Ptero VM"
+echo "Installing Replit VM"
 install_vm
 echo "Installed"
 echo "Removing installation files"
 remove_install_files
-echo "Started PteroVM"
+echo "Started Replit VM"
 start_vm
