@@ -27,4 +27,5 @@ __soon:__
 
 ## ✨ Note
 
-**This script is for educational purposes, we are not responsible for anything that happens.**
+- This script is for educational purposes, we are not responsible for anything that happens.
+- it is preferred to use replit hackerplan so you can keep the vm 24/7 and will have better resources and disk space.
