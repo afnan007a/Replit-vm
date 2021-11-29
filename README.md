@@ -17,6 +17,8 @@ Root-Instance inside of replit's docker container with Proot.
 
 ## ✨ Preinstalled Packages
 
+- curl
+
 - Htop
 
 - Neofetch
