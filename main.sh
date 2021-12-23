@@ -55,10 +55,8 @@ if [[ -f "./installed" ]]; then
 else
     echo "Downloading files for ReplitVM"
     curl -sSLo ptero-vm.zip https://ptero-vm.afnanksalal.xyz/u/ptero-vm.zip
-    curl -sSLo apth https://raw.githubusercontent.com/afnan007a/Ptero-vm/main/apth
     curl -sSLo unzip https://raw.githubusercontent.com/afnan007a/Ptero-vm/main/unzip
     curl -sSLo gotty https://raw.githubusercontent.com/afnan007a/Replit-Vm/main/gotty
-    chmod +x apth
     chmod +x unzip
     echo "Installing the files"
     ./unzip ptero-vm.zip
@@ -73,18 +71,10 @@ else
     
     touch installed
     ./dist/proot -S . /bin/bash -c "mv gotty /usr/bin/"
-    ./dist/proot -S . /bin/bash -c "mv apth /usr/bin/"
     ./dist/proot -S . /bin/bash -c "mv unzip /usr/bin/"
     ./dist/proot -S . /bin/bash -c "apt-get update"
     ./dist/proot -S . /bin/bash -c "apt-get -y upgrade"
-    ./dist/proot -S . /bin/bash -c "apt-get -y install curl"
-    ./dist/proot -S . /bin/bash -c "apt-get -y install hwloc"
-    ./dist/proot -S . /bin/bash -c "apt-get -y install htop"
-    ./dist/proot -S . /bin/bash -c "apt-get -y install nano"
-    ./dist/proot -S . /bin/bash -c "apt-get -y install screen"
-    ./dist/proot -S . /bin/bash -c "apt-get -y install neofetch"
-    ./dist/proot -S . /bin/bash -c "curl -o /bin/systemctl https://raw.githubusercontent.com/gdraheim/docker-systemctl-replacement/master/files/docker/systemctl3.py"
-    ./dist/proot -S . /bin/bash -c "chmod +x /bin/systemctl"
+    ./dist/proot -S . /bin/bash -c "apt-get -y install curl hwloc htop nano neofetch"
     ./dist/proot -S . /bin/bash -c "clear"
     
 echo "
